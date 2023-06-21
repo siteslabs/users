@@ -3,6 +3,7 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 
 import tsconfig from "./tsconfig.json";
+import svgr from "vite-plugin-svgr";
 
 const SRC_PATH = path.resolve(__dirname, "src");
 
@@ -22,7 +23,7 @@ const parseTsConfigPaths = (
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()],
+  plugins: [react(), svgr()],
   resolve: {
     alias: parseTsConfigPaths(tsconfig.compilerOptions.paths),
   },

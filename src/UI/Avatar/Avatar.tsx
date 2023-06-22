@@ -1,4 +1,4 @@
-import { UserIcon } from "assets/icons";
+import { AvatarIcon } from "assets/icons";
 import React from "react";
 
 interface IAvatarProps {
@@ -18,7 +18,7 @@ const Avatar: React.FC<IAvatarProps> = ({ imgUrl }) => {
 
   return (
     <div className="flex h-16 w-16 items-center justify-center rounded-full bg-default-20 ">
-      <UserIcon />
+      <AvatarIcon />
     </div>
   );
 };

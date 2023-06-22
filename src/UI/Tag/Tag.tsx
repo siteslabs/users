@@ -1,12 +1,12 @@
 import React from "react";
 
-interface ITag {
+interface ITagProps {
   text: string;
 }
 
-const Tag: React.FC<ITag> = ({ text }) => {
+const Tag: React.FC<ITagProps> = ({ text }) => {
   return (
-    <div className="cursor-pointer rounded-[10px] border border-solid border-[#C1C1CB] px-[12px] py-[5px]  leading-[20px] text-[#9494A0]">
+    <div className="cursor-pointer rounded-default border border-solid border-default-40 px-3 py-[0.313rem]  leading-5 text-default-50">
       {text}
     </div>
   );

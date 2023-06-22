@@ -35,7 +35,7 @@ const UserCard: React.FC<IUserCardProps> = ({ user, className }) => {
         </div>
         <div className="flex flex-wrap items-center space-x-[0.188rem]">
           {permissions.map((permission) => (
-            <div className="mt-1">
+            <div key={permission} className="mt-1">
               <Tag key={permission} text={permission} />
             </div>
           ))}

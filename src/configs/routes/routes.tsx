@@ -15,6 +15,6 @@ export const routes: RouteObject[] = [
   },
   {
     index: true,
-    element: <Navigate to={"/team"} />,
+    element: <Navigate to={urls.team.path} />,
   },
 ];

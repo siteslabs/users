@@ -19,7 +19,7 @@ const UserList: React.FC<IUserListProps> = ({ users }) => {
         <span className="text- text-[1.625rem] font-medium">Права доступа</span>
       </div>
       <div className="space-y-2 px-4 md:flex md:items-center md:justify-between md:gap-2.5 md:space-y-0 lg:my-5">
-        <span className="hidden text-[1.625rem] font-medium lg:mr-24 lg:inline">
+        <span className="hidden text-[1.625rem] font-medium lg:mr-10 lg:inline xl:mr-24">
           Команда
         </span>
         <div className="w-full md:shrink">
@@ -31,7 +31,11 @@ const UserList: React.FC<IUserListProps> = ({ users }) => {
       </div>
       <div className="mt-3 lg:[&>*:first-child]:border-t lg:[&>*:first-child]:border-t-default-10">
         {users.map((user) => (
-          <UserCard className="px-4 py-2.5 lg:px-7 lg:py-6" user={user} />
+          <UserCard
+            key={user.email}
+            className="px-4 py-2.5 lg:px-7 lg:py-6"
+            user={user}
+          />
         ))}
       </div>
     </div>

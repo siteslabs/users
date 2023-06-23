@@ -19,6 +19,9 @@ export default {
       borderRadius: {
         default: "0.625rem",
       },
+      boxShadow: {
+        default: "-30px 30px 50px 0px rgba(28,28,30,0.1)",
+      },
     },
   },
   plugins: [],

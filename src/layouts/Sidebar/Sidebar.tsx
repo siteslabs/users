@@ -1,4 +1,4 @@
-import React, { PropsWithChildren, useState } from "react";
+import React, { PropsWithChildren } from "react";
 import cn from "classnames";
 
 import { Avatar } from "UI/Avatar";
@@ -6,14 +6,18 @@ import { BarsIcon, LogoIcon } from "assets/icons";
 
 import { navList } from "./const";
 import { Link } from "react-router-dom";
+import { useAppDispatch, useAppSelector } from "store/index";
+import { selectIsSidebarOpened } from "store/sidebar/selector";
+import { closeSidebar, openSidebar } from "store/sidebar/slice";
 
 const Sidebar: React.FC<PropsWithChildren> = ({ children }) => {
-  const [isShown, setIsShown] = useState(true);
+  const dispatch = useAppDispatch();
+  const isShown = useAppSelector(selectIsSidebarOpened);
 
-  const hideSidebar = () => setIsShown(false);
+  const hideSidebar = () => dispatch(closeSidebar());
   const showSidebar = () => {
     if (!isShown) {
-      setIsShown(true);
+      dispatch(openSidebar());
     }
   };
 
@@ -22,7 +26,7 @@ const Sidebar: React.FC<PropsWithChildren> = ({ children }) => {
       <div
         onClick={showSidebar}
         className={cn(
-          "fixed left-0 top-0 h-screen w-full rounded-tr-[15px] bg-default-5 pt-10 transition-all duration-75 lg:max-w-[15.25rem]",
+          "fixed left-0 top-0 z-10 h-screen w-full rounded-tr-[15px] bg-default-5 pt-10 transition-all duration-75 lg:max-w-[15.25rem]",
           {
             "-translate-x-full lg:w-[6.25rem] lg:translate-x-0 lg:justify-center":
               !isShown,

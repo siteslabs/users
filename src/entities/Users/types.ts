@@ -1,6 +1,8 @@
 export type TUser = {
-  name: string;
+  name?: string;
   email: string;
-  permissions: string[];
-  image: string;
+  permissions?: string[];
+  image?: string;
+  isAuthorized: boolean;
+  id: number;
 };

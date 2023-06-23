@@ -10,6 +10,8 @@
       "containers": ["containers/*"],
       "UI": ["UI/*"],
       "configs": ["configs/*"],
+      "store": ["store/*"],
+      "utils": ["utils/*"],
       "pages": ["pages/*"]
     },
     "target": "ES2020",

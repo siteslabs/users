@@ -15,6 +15,7 @@ export default {
         "danger-regular": "#FF9E90",
         "button-bg": "#32C076",
         "button-bg-hover": "#28ce78",
+        "checkbox-checked-bg": "#5856d6",
       },
       borderRadius: {
         default: "0.625rem",

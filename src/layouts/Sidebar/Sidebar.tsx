@@ -40,6 +40,7 @@ const Sidebar: React.FC<PropsWithChildren> = ({ children }) => {
           })}
           onClick={hideSidebar}
         >
+          {/* INFO: BarsIcon is according to design, but it might be more correct to change to "x" Icon */}
           {isShown ? <BarsIcon /> : <LogoIcon />}
         </div>
         <div

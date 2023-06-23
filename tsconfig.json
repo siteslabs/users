@@ -7,6 +7,7 @@
       "assets": ["assets/*"],
       "components": ["components/*"],
       "layouts": ["layouts/*"],
+      "containers": ["containers/*"],
       "UI": ["UI/*"],
       "configs": ["configs/*"],
       "pages": ["pages/*"]

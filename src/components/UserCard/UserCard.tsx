@@ -1,9 +1,26 @@
 import React from "react";
+import Dropdown from "rc-dropdown";
+import "rc-dropdown/assets/index.css";
 
 import { Avatar } from "UI/Avatar";
 import { Tag } from "UI/Tag";
 import { DotsIcon } from "assets/icons";
 import { TUser } from "entities/Users";
+
+import { options } from "./const";
+
+const menuCallback = () => (
+  <div className="overflow-hidden rounded-2xl bg-default-5 py-2 shadow-default">
+    {options.map(({ text, onClick }) => (
+      <div
+        onClick={onClick}
+        className="cursor-pointer px-6 py-2 text-blue-grey-regular hover:bg-default-10"
+      >
+        {text}
+      </div>
+    ))}
+  </div>
+);
 
 interface IUserCardProps {
   user: TUser;
@@ -29,9 +46,16 @@ const UserCard: React.FC<IUserCardProps> = ({ user, className }) => {
             </div>
             <div className="text-sm text-default-50">{email}</div>
           </div>
-          <div className="cursor-pointer py-1.5">
-            <DotsIcon />
-          </div>
+          <Dropdown
+            trigger={["click"]}
+            overlay={menuCallback}
+            animation="slide-up"
+            onVisibleChange={() => console.log("onVisibleChange")}
+          >
+            <div className="cursor-pointer pt-1.5">
+              <DotsIcon />
+            </div>
+          </Dropdown>
         </div>
         <div className="flex flex-wrap items-center space-x-[0.188rem]">
           {permissions.map((permission) => (

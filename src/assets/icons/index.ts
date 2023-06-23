@@ -12,6 +12,8 @@ import { ReactComponent as UsersIcon } from "./users.svg";
 import { ReactComponent as UserIcon } from "./user.svg";
 import { ReactComponent as PieIcon } from "./pie.svg";
 import { ReactComponent as LogoIcon } from "./logo.svg";
+import { ReactComponent as CloseIcon } from "./close.svg";
+import { ReactComponent as CheckedIcon } from "./checked.svg";
 
 export {
   AvatarIcon,
@@ -28,4 +30,6 @@ export {
   UserIcon,
   PieIcon,
   LogoIcon,
+  CloseIcon,
+  CheckedIcon,
 };

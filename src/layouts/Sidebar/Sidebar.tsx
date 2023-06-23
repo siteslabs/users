@@ -32,7 +32,7 @@ const Sidebar: React.FC<PropsWithChildren> = ({ children }) => {
         <div
           className={cn("mb-5 cursor-pointer transition-all", {
             "flex justify-center": !isShown,
-            "px-3.5": isShown,
+            "w-fit pl-3.5": isShown,
           })}
           onClick={hideSidebar}
         >
